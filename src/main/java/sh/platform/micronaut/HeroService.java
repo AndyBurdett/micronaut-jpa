@@ -36,4 +36,9 @@ public class HeroService {
         return query.getResultList();
     }
 
+    @Transactional
+    public void deleteById(@NotNull Long id) {
+        findById(id).ifPresent(entityManager::remove);
+    }
+
 }
