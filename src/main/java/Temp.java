@@ -5,6 +5,6 @@ public class Temp {
 
     public static void main(String[] args) throws IOException {
         System.out.println("starting");
-        System.out.println("Testing: " + System.getenv("JDBC_USER"));
+        System.out.println("Testing: " + System.getenv("JDBC_URL"));
     }
 }
