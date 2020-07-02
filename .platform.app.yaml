@@ -5,6 +5,3 @@ hooks:
     build: mvn clean package -DskipTests
 relationships:
     database: "db:postgresql"
-web:
-    commands:
-        start: java -jar $JAVA_OPTS target/jpa-0.1.jar
