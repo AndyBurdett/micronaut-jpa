@@ -20,6 +20,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <micronaut.version>2.0.0</micronaut.version>
         <exec.mainClass>sh.platform.micronaut.Application</exec.mainClass>
+        <micronaut.data.version>1.1.1</micronaut.data.version>
         <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
         <maven-failsafe-plugin.version>2.22.2</maven-failsafe-plugin.version>
     </properties>
@@ -77,16 +78,6 @@
         <dependency>
             <groupId>io.micronaut.sql</groupId>
             <artifactId>micronaut-jdbc-hikari</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.micronaut.sql</groupId>
-            <artifactId>micronaut-hibernate-jpa</artifactId>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.micronaut.data</groupId>
-            <artifactId>micronaut-data-processor</artifactId>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -164,6 +155,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
+                    <!-- Uncomment to enable incremental compilation -->
+                    <!-- <useIncrementalCompilation>false</useIncrementalCompilation> -->
                     <annotationProcessorPaths>
                         <path>
                             <groupId>io.micronaut</groupId>
@@ -174,6 +167,11 @@
                             <groupId>io.micronaut</groupId>
                             <artifactId>micronaut-validation</artifactId>
                             <version>${micronaut.version}</version>
+                        </path>
+                        <path>
+                            <groupId>io.micronaut.data</groupId>
+                            <artifactId>micronaut-data-processor</artifactId>
+                            <version>${micronaut.data.version}</version>
                         </path>
                     </annotationProcessorPaths>
                     <compilerArgs>
@@ -198,6 +196,11 @@
                                     <groupId>io.micronaut</groupId>
                                     <artifactId>micronaut-validation</artifactId>
                                     <version>${micronaut.version}</version>
+                                </path>
+                                <path>
+                                    <groupId>io.micronaut.data</groupId>
+                                    <artifactId>micronaut-data-processor</artifactId>
+                                    <version>${micronaut.data.version}</version>
                                 </path>
                             </annotationProcessorPaths>
                         </configuration>
