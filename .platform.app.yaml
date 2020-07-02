@@ -7,4 +7,4 @@ relationships:
     database: "db:postgresql"
 web:
     commands:
-        start: java $JAVA_OPTS $CREDENTIAL -jar target/micronaut-1.0-SNAPSHOT.jar
+        start: java $JAVA_OPTS -jar target/micronaut-1.0-SNAPSHOT.jar
