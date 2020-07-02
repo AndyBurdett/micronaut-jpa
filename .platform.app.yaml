@@ -7,4 +7,4 @@ relationships:
     database: "db:postgresql"
 web:
     commands:
-        start: java -jar $JAVA_OPTS target/jpa-0.1.jar
+        start: java -jar $CREDENTIAL $JAVA_OPTS target/jpa-0.1.jar
