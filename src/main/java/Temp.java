@@ -6,7 +6,6 @@ public class Temp {
     public static void main(String[] args) throws IOException {
         System.out.println("starting");
         ServerSocket serverSocket = new ServerSocket(9999);
-        serverSocket.accept();
-        System.out.println("stoppinggi");
+        System.out.println("test:  " + java.net.InetAddress.getLocalHost());
     }
 }
